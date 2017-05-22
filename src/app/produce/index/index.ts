@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
-var kk=require("../../../assets/images/aa.png")
+import {Component, OnInit, Inject} from '@angular/core';
+
+import {AppService} from './../../app.service';
+
+var kk = require("../../../assets/images/aa.png");
+
 @Component({
     selector: 'index',
     template: require("./index.jade"),
-    styles:[require("./index.less").toString()]
-    //template: `<div>index</div>`
+    styles: [require("./index.less").toString()]
 })
 
-export class IndexComponent {
-    kk1=kk
+export class IndexComponent implements OnInit {
+    constructor(@Inject(AppService) private appService: AppService) {
+    }
+
+    kk1 = kk
+    ngOnInit() {
+        this;
+        debugger
+    }
 }

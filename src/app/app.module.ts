@@ -8,9 +8,11 @@ import {AppRoutingModule} from './app-routing.module';
 /* 大类模块 */
 import {ProduceModule} from './produce/module'
 /* 应用最上层组件 */
-import {AppComponent} from './app.component';
+import {AppComponent} from './app';
 /* 加载全局样式 */
-require('../assets/style/entery.less');
+require('../assets/style/style.less');
+
+import {AppService} from './app.service';
 
 @NgModule({
     imports: [
@@ -19,7 +21,8 @@ require('../assets/style/entery.less');
         AppRoutingModule
     ],
     declarations: [AppComponent],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    providers:[AppService]
 })
 
 export class AppModule {

@@ -1,0 +1,186 @@
+input, button, select, textarea {
+  outline: none;
+  font-size: 1em;
+  cursor: pointer
+}
+
+input, textarea, button, select, input[type=radio] {
+  outline: none;
+  &::-webkit-input-placeholder{
+  color: lighten(@black, 80%);
+  font-size: 12px;
+}
+}
+
+input {
+  &:-webkit-autofill {
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-image: none !important;
+    color: @color-text-3 !important;
+  }
+}
+
+input, textarea {
+  border: @border;
+  border-radius: 4px;
+  padding: 0 6px;
+  outline: none;
+  background: none;
+  &:focus {
+    border: 1px solid @color-1;
+    box-shadow: 0 0 5px @color-2;
+  }
+  &.danger {
+    border-color: @danger;
+    &:focus {
+      border: 1px solid @danger;
+      box-shadow: 0 0 5px @danger;
+    }
+  }
+  &.disabled, &:disabled {
+    cursor: no-drop;
+    background: @color-7;
+    opacity: 0.8;
+  }
+}
+
+input {
+  height: 32px;
+}
+//checkbox======================
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"]+label {
+  //margin-top: 10px;
+  //margin-left: 5px;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+}
+
+input[type="checkbox"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 5px;
+  -webkit-box-sizing:border-box;
+  -webkit-transition:background ease-in .1s;
+  background: url("../../images/common/checkbox2.png");
+}
+input[type="checkbox"]:checked+label::before{
+  background: url("../../images/common/checkbox1.png");
+}
+/*input[type="checkbox"]:checked+label::after {
+  position: absolute;
+  left:3px; top: 3px;
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: @color-1 ;
+  vertical-align: middle;
+  -webkit-border-radius: 6px;
+  margin-right: 5px;
+  -webkit-box-sizing:border-box;
+  -webkit-transition:background ease-in .1s;
+  border: 1px @color-1 solid;
+}*/
+
+//radio======================
+input[type="radio"]{
+  display: none;
+}
+input[type="radio"]+label {
+  display: inline-block;
+  margin-left: 5px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="radio"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: @white;
+  vertical-align: middle;
+  -webkit-border-radius: 50%;
+  margin-right: 5px;
+  -webkit-box-sizing:border-box;
+  -webkit-transition:background ease-in .1s;
+  border: 1px @color-4 solid;
+}
+input[type="radio"]:checked+label::before{
+  background-color: @white;
+  border: 4px @color-1 solid;
+}
+
+
+
+
+
+textarea {
+  padding: 6px;
+}
+
+select {
+  height: 32px;
+  background: none;
+  border-radius: 0;
+  padding: 0 24px 0 5px;
+  box-shadow: 0 -1px 0 0 @borderColor inset;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../../images/common/selectD.png") no-repeat right 7px;
+  &:focus {
+    box-shadow: 0 -1px 0 0 @color-1 inset;
+  }
+  &.danger {
+    box-shadow: 0 -1px 0 0 @danger inset;
+    &:focus {
+      box-shadow: 0 -1px 0 0 @danger inset;
+    }
+  }
+  &:disabled, .disabled {
+    background: @color-7;
+    cursor: no-drop;
+    border-radius: 6px 6px 0 0;
+    opacity: 0.8;
+  }
+  &.hasBorder {
+    border: 1px solid @borderColor;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 0 24px 0 6px;
+    background: url("../../images/common/selectD.png") no-repeat right 6px;
+    &:focus {
+      box-shadow: 0 0 5px @color-1;
+      border-color: @color-1;
+    }
+    &.danger {
+      border: 1px solid @danger;
+      &:focus {
+        box-shadow: 0 0 5px @danger;
+        border-color: @danger;
+      }
+    }
+    &:disabled, .disabled {
+      background: @color-7;
+    }
+  }
+
+}
+
+.wapSelect{ position: relative; border: @border; border-radius: 6px; height: 32px;
+  span{ display: block; position: absolute; left: 0; top:0; height: 30px; line-height: 30px;
+    padding: 0 3px 0 6px; background: @color-7; border-radius: 6px 0 0 6px;}
+  select{ border: none; box-shadow: none;}
+
+}
