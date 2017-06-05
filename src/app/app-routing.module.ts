@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'produce', pathMatch: 'full'},
-  { path: 'produce', loadChildren: './produce/module#ProduceModule'  },
+  { path: 'produce', loadChildren: './produceModule/module#ProduceModule'  },
 
 ];
 

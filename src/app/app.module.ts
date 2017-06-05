@@ -6,7 +6,8 @@ import {BrowserModule} from '@angular/platform-browser';
 /* 路由模块 */
 import {AppRoutingModule} from './app-routing.module';
 /* 大类模块 */
-import {ProduceModule} from './produce/module'
+import {ProduceModule} from './produceModule/module'
+import {UserModule} from './userModule/module'
 /* 应用最上层组件 */
 import {AppComponent} from './app';
 /* 加载全局样式 */
@@ -18,6 +19,7 @@ import {AppService} from './app.service';
     imports: [
         BrowserModule,
         ProduceModule,
+        UserModule,
         AppRoutingModule
     ],
     declarations: [AppComponent],

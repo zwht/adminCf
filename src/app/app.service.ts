@@ -8,7 +8,7 @@ export class AppService {
     name='0066660'
     getHeroes(): string {
         this.route
-        debugger
-        return this.name
+        //debugger
+        return "uuuuuu"
     }
 }

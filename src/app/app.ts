@@ -14,9 +14,10 @@ export class AppComponent implements OnInit {
     }
 
     userName = '';
+    fuck;
 
     ngOnInit() {
-        this.appService.name='999999';
-        this.appService.getHeroes();
+        //this.appService.name='999999';
+        this.fuck=this.appService.getHeroes();
     }
 }
