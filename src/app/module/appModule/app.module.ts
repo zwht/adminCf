@@ -6,15 +6,17 @@ import {BrowserModule} from '@angular/platform-browser';
 /* 路由模块 */
 import {AppRoutingModule} from './app-routing.module';
 /* 大类模块 */
-import  {CommonModule} from './commonModule/module'
-import {ProduceModule} from './produceModule/module'
-import {UserModule} from './userModule/module'
+import  {CommonModule} from '../commonModule/module'
+import {UserModule} from '../userModule/module'
+import {MenuModule} from '../menuModule/module'
 /* 应用最上层组件 */
 import {AppComponent} from './app';
 /* 加载全局样式 */
-require('../assets/style/style.less');
+require('../../../assets/style/style.less');
+
 
 import {AppService} from './app.service';
+
 
 @NgModule({
     imports: [
@@ -22,7 +24,7 @@ import {AppService} from './app.service';
 
         AppRoutingModule,
 
-        ProduceModule,
+        MenuModule,
         UserModule,
         CommonModule,
     ],
@@ -31,5 +33,5 @@ import {AppService} from './app.service';
     providers:[AppService]
 })
 
-export class zwAppModule {
+export class ZwAppModule {
 }

@@ -1,8 +1,8 @@
 import {Component, OnInit, Inject} from '@angular/core';
 
-import {AppService} from './../../app.service';
+import {AppService} from '../../appModule/app.service';
 
-var kk = require("../../../assets/images/aa.png");
+var kk = require("../../../../assets/images/aa.png");
 
 @Component({
     selector: 'index',
