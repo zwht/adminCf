@@ -8,8 +8,7 @@ import {TestCom}    from './testB/test1';
     imports: [RouterModule.forChild([
         {path: 'produce', component: IndexComponent},
         {path: 'produce/test', component: TestCom}
-    ])],
-    exports: [RouterModule]
+    ])]
 })
 export class ProduceRoutingModule {
 }

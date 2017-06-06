@@ -6,6 +6,7 @@ import {BrowserModule} from '@angular/platform-browser';
 /* 路由模块 */
 import {AppRoutingModule} from './app-routing.module';
 /* 大类模块 */
+import  {CommonModule} from './commonModule/module'
 import {ProduceModule} from './produceModule/module'
 import {UserModule} from './userModule/module'
 /* 应用最上层组件 */
@@ -17,15 +18,18 @@ import {AppService} from './app.service';
 
 @NgModule({
     imports: [
-        BrowserModule,
+        BrowserModule,//这个和每个在浏览器中运行应用都需要它
+
+        AppRoutingModule,
+
         ProduceModule,
         UserModule,
-        AppRoutingModule
+        CommonModule,
     ],
-    declarations: [AppComponent],
-    bootstrap: [AppComponent],
+    declarations: [AppComponent],//当前组件使用到的(组件，指令，管道)列表
+    bootstrap: [AppComponent],//根组件，Angular 创建它并插入index.html宿主页面,可以插入多个
     providers:[AppService]
 })
 
-export class AppModule {
+export class zwAppModule {
 }

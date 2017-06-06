@@ -1,12 +1,12 @@
 import {NgModule}            from '@angular/core';
 import {RouterModule}        from '@angular/router';
 
-import {LoginComponent}    from './login/login';
+import {Component404}    from './404/404';
 
 @NgModule({
     imports: [RouterModule.forChild([
-        {path: 'login', component: LoginComponent}
+        {path: '**', component: Component404}
     ])]
 })
-export class UserRoutingModule {
+export class CommonRoutingModule {
 }
