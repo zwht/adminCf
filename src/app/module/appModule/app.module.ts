@@ -10,11 +10,11 @@ import  {CommonModule} from '../commonModule/module'
 import {UserModule} from '../userModule/module'
 import {MenuModule} from '../menuModule/module'
 /* 应用最上层组件 */
-import {AppComponent} from './app';
+import {MainComponent} from './main/main';
 /* 加载全局样式 */
 require('../../../assets/style/style.less');
 
-
+import {Component404}    from './404/404';
 import {AppService} from './app.service';
 
 
@@ -22,15 +22,15 @@ import {AppService} from './app.service';
     imports: [
         BrowserModule,//这个和每个在浏览器中运行应用都需要它
 
-        AppRoutingModule,
-
         MenuModule,
         UserModule,
         CommonModule,
+
+        AppRoutingModule
     ],
-    declarations: [AppComponent],//当前组件使用到的(组件，指令，管道)列表
-    bootstrap: [AppComponent],//根组件，Angular 创建它并插入index.html宿主页面,可以插入多个
-    providers:[AppService]
+    declarations: [MainComponent, Component404],//当前组件使用到的(组件，指令，管道)列表
+    bootstrap: [MainComponent],//根组件，Angular 创建它并插入index.html宿主页面,可以插入多个
+    providers: [AppService]
 })
 
 export class ZwAppModule {

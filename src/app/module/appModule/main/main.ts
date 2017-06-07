@@ -1,14 +1,14 @@
 import {Component, OnInit, Inject} from '@angular/core';
-import {AppService} from './app.service';
+import {AppService} from './../app.service';
 
 
 @Component({
     selector: 'my-app',
-    template: require('./app.jade'),
-    styles: [require('./app.less').toString()],
+    template: require('./main.jade'),
+    styles: [require('./main.less').toString()],
 })
 
-export class AppComponent implements OnInit {
+export class MainComponent implements OnInit {
 
     constructor(@Inject(AppService) private appService: AppService) {
     }

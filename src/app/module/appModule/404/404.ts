@@ -7,7 +7,6 @@ import {Component, OnInit, Inject} from '@angular/core';
 })
 
 export class Component404 implements OnInit {
-
     name = 404
     ngOnInit() {
     }
