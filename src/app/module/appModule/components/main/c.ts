@@ -1,11 +1,11 @@
 import {Component, OnInit, Inject} from '@angular/core';
-import {AppService} from './../app.service';
+import {AppService} from '../../services/test';
 
 
 @Component({
     selector: 'my-app',
-    template: require('./main.jade'),
-    styles: [require('./main.less').toString()],
+    template: require('./v.jade'),
+    styles: [require('./s.less').toString()],
 })
 
 export class MainComponent implements OnInit {

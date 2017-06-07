@@ -4,18 +4,18 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 /* 路由模块 */
-import {AppRoutingModule} from './app-routing.module';
+import {AppRoutingModule} from './routing.module';
 /* 大类模块 */
 import  {CommonModule} from '../commonModule/module'
 import {UserModule} from '../userModule/module'
 import {MenuModule} from '../menuModule/module'
 /* 应用最上层组件 */
-import {MainComponent} from './main/main';
+import {MainComponent} from './components/main/c';
 /* 加载全局样式 */
 require('../../../assets/style/style.less');
 
-import {Component404}    from './404/404';
-import {AppService} from './app.service';
+import {Component404}    from './components/404/c';
+import {AppService} from './services/test';
 
 
 @NgModule({

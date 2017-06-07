@@ -1,6 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { ZwAppModule } from './app/module/appModule/app.module'
+import { ZwAppModule } from './app/module/appModule/module'
 
 
 const platform = platformBrowserDynamic();

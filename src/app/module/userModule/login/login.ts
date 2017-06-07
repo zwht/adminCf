@@ -1,6 +1,5 @@
 import {Component, OnInit, Inject} from '@angular/core';
 
-import {AppService} from '../../appModule/app.service';
 
 var kk = require("../../../../assets/images/aa.png");
 
@@ -11,8 +10,6 @@ var kk = require("../../../../assets/images/aa.png");
 })
 
 export class LoginComponent implements OnInit {
-    constructor(@Inject(AppService) private appService: AppService) {
-    }
 
     kk1 = kk
     ngOnInit() {
