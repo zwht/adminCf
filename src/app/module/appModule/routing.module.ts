@@ -5,8 +5,8 @@ import {Component404}    from './components/404/c';
 
 
 export const routes: Routes = [
-    {path: '', redirectTo: 'login', pathMatch: 'full'},
-    //{path: 'menu', loadChildren: '../menuModule/module#MenuModule'},
+    {path: '', redirectTo: 'menu', pathMatch: 'full'},
+    {path: 'menu', loadChildren: '../menuModule/module#MenuModule'},
     {path: '**', component: Component404}
 
 ];

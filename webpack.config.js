@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -7,11 +8,12 @@ var extractLESS = new ExtractTextPlugin('./assets/css/style.css');
 
 module.exports = {
     entry: {
-        main: './src/main.ts'
+        main: './src/main.ts',
+        //angular: ['@angular/platform-browser-dynamic']
     },
     output: {
         path: path.resolve(__dirname, './build'),
-        filename: 'assets/js/bundle.js',
+        filename: 'js/[name].js'
         //publicPath: "http://127.0.0.1:8888/"
     },
     module: {
@@ -94,15 +96,15 @@ module.exports = {
             inject: true,
             hash: true
         }),
-        /*new webpack.optimize.UglifyJsPlugin({    //压缩代码
-         compress: {
-         warnings: false
-         },
-         output: {
-         comments: false  // remove all comments
-         },
-         except: ['$super', '$', 'exports', 'require']    //排除关键字
-         })*/
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'node_modules',
+            minChunks: function (module, count) {
+                //console.log(module.resource)
+                //console.log(path.join(__dirname, '/node_modules'))
+                // any required modules inside node_modules are extracted to vendor
+                return (module.resource && /\.js$/.test(module.resource) && module.resource.indexOf(path.join(__dirname, '/node_modules')) === 0);
+            }
+        })
 
     ]
 };

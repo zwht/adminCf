@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "start": "gulp && webpack-dev-server --open --inline --hot --colors --progress",
+    "build": "webpack -p",
     "postinstall": "./node_modules/.bin/typings install"
   },
   "author": "Jean",
